@@ -1,0 +1,23 @@
+:root {
+  --site-bg-color: white;
+  --site-text-color: black;
+  --nav-bg-color: rgba(102, 102, 102, 0.466);
+  --nav-text-color: white;
+  --nav-theme-toggle-icon-fill: white;
+  --login-button-bg: blue;
+  --register-button-bg: rgb(231, 0, 0);
+  --submit-button-bg: rgb(0, 154, 0);
+  --user-form-container-bg: rgb(96, 96, 208);
+}
+
+html.dark {
+  --site-bg-color: black;
+  --site-text-color: white;
+  --nav-bg-color: rgba(139, 139, 139, 0.477);
+  --nav-text-color: black;
+  --nav-theme-toggle-icon-fill: white;
+  --login-button-bg: rgb(75, 75, 255);
+  --register-button-bg: rgb(167, 7, 7);
+  --submit-button-bg: rgb(11, 175, 11);
+  --user-form-container-bg: rgba(37, 37, 255, 0.312);
+}

@@ -1,0 +1,17 @@
+%button-base {
+  padding: 10 20;
+  color: white;
+  border-radius: 10;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}

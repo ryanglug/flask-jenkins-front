@@ -1,0 +1,29 @@
+.forms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20;
+}
+
+%container {
+  background-color: var(--user-form-container-bg);
+  border-radius: 20;
+  padding: 10 20 20 30;
+}
+
+.user-form-container {
+  @extend %container;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 15;
+  }
+}
+
+.comments-container {
+  @extend %container;
+  margin-top: 30;
+}
+.comments-create-form {
+  @extend %container;
+  margin-top: 30;
+}

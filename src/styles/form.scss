@@ -1,0 +1,33 @@
+@use "bases";
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10;
+
+  button {
+    margin-top: 10;
+  }
+
+  label {
+    font-size: 18;
+    font-weight: 500;
+  }
+
+  .user-form-input {
+    padding: 10;
+    border-radius: 5;
+    border: none;
+    outline: none;
+  }
+}
+
+.btn-login {
+  @extend %button-base;
+  background-color: var(--login-button-bg);
+}
+
+.btn-register {
+  @extend %button-base;
+  background-color: var(--register-button-bg);
+}

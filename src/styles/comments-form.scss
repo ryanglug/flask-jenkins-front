@@ -1,0 +1,7 @@
+@use "bases";
+
+.submit-comment-button {
+  @extend %button-base;
+  background-color: var(--submit-button-bg);
+  max-width: 100;
+}
