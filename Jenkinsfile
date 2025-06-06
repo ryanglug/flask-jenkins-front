@@ -9,7 +9,7 @@
       BACKEND_API_URL = credentials('backend-api-url')
       VM_USER = credentials('vm-user')
       VM_IP = '20.90.166.46'
-      CONTAINER_NAME = 'flask-api-front'
+      CONTAINER_NAME = 'flask-front'
   }
 
   stages {
