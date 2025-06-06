@@ -1,5 +1,5 @@
 import "../styles/comments-form.scss";
-import "../styles/Form.scss";
+import "../styles/form.scss";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -31,8 +31,6 @@ const CommentsForm = () => {
     if (!accessToken) return;
     try {
       const res = await authedApi(accessToken).post("/comment", values);
-
-      console.log(res.status, res.data);
 
       queryClient.invalidateQueries({ queryKey: ["comments"] });
       alert("Comment created successfully!");

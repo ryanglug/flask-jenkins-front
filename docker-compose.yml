@@ -1,0 +1,21 @@
+networks:
+  flask-network:
+
+services:
+  backend:
+    networks:
+      - flask-network
+    image: ryanglug/jenkins-flask:latest
+    container_name: flask-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .back.env
+
+  frontend:
+    networks:
+      - flask-network
+    image: ryanglug/flask-api-front:latest
+    container_name: flask-frontend
+    ports:
+      - "2000:80"

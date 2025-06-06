@@ -3,17 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "source": "src/index.html",
+  "type": "module",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build src/index.html --no-scope-hoist --dist-dir dist --public-url ./",
+    "build-local": "parcel build"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
     "@tanstack/react-query": "^5.80.6",
     "@theme-toggles/react": "^4.1.0",
     "axios": "^1.9.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.57.0",
     "react-router": "^6.30.1",
     "react-router-dom": "^6.30.1",

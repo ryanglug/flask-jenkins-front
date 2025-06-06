@@ -59,7 +59,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const res = await authApi.get("/refresh");
         const access = res.data.access;
 
-        console.log(res.status, res.data);
         setAccessToken(access);
       } catch (error) {
         console.log(error);
