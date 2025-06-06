@@ -37,7 +37,12 @@ const CommentsList = () => {
 
   return (
     <ul className="comment-list">
-      {data && data.map((comment) => <li className="">{comment.content}</li>)}
+      {data &&
+        data.map((comment, i) => (
+          <li key={`comment-li-${i}`} className="">
+            {comment.content}
+          </li>
+        ))}
     </ul>
   );
 };

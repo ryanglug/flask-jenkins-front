@@ -3,8 +3,13 @@
 .comment-list {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   align-items: center;
   gap: 20;
+  max-height: 400;
+
+  li {
+    list-style: none;
+  }
 }
