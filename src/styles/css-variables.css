@@ -8,6 +8,7 @@
   --register-button-bg: rgb(231, 0, 0);
   --submit-button-bg: rgb(0, 154, 0);
   --user-form-container-bg: rgb(96, 96, 208);
+  --list-item-bg: rgba(255, 255, 255, 0.422);
 }
 
 html.dark {
@@ -20,4 +21,5 @@ html.dark {
   --register-button-bg: rgb(167, 7, 7);
   --submit-button-bg: rgb(11, 175, 11);
   --user-form-container-bg: rgba(37, 37, 255, 0.312);
+  --list-item-bg: rgba(255, 255, 255, 0.148);
 }

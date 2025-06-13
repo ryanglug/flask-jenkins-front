@@ -2,11 +2,8 @@ import { useQuery } from "@tanstack/react-query";
 import "../styles/comments-list.scss";
 import { useAuth } from "../contexts/auth-context";
 import { authedApi } from "../lib/api";
-
-interface Comment {
-  id: number;
-  content: string;
-}
+import CommentItem from "./comment-item";
+import { Comment } from "../lib/types";
 
 const getComments = async (accessToken: string) => {
   try {
@@ -39,9 +36,10 @@ const CommentsList = () => {
     <ul className="comment-list">
       {data &&
         data.map((comment, i) => (
-          <li key={`comment-li-${i}`} className="">
-            {comment.content}
-          </li>
+          <CommentItem
+            comment={comment}
+            key={`user-comment=${comment.content}-${comment.id}`}
+          />
         ))}
     </ul>
   );

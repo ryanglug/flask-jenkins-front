@@ -1,5 +1,6 @@
 networks:
   flask-network:
+    driver: bridge
 
 services:
   backend:
@@ -9,13 +10,16 @@ services:
     container_name: flask-backend
     ports:
       - "8000:8000"
-    env_file:
-      - .back.env
 
   frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        API_URL: "http://localhost:8000/api"
+    image: ryanglug/flask-api-front:latest
     networks:
       - flask-network
-    image: ryanglug/flask-api-front:latest
     container_name: flask-frontend
     ports:
       - "2000:80"
